@@ -12,15 +12,15 @@ package entities;
 public class Filme {
     private String nome;
     private int estoque;
-    private double prcoLocacao;
+    private double precoLocacao;
 
     public Filme() {
     }
 
-    public Filme(String nome, int estoque, double prcoLocacao) {
+    public Filme(String nome, int estoque, double precoLocacao) {
         this.nome = nome;
         this.estoque = estoque;
-        this.prcoLocacao = prcoLocacao;
+        this.precoLocacao = precoLocacao;
     }
 
     public String getNome() {
@@ -39,12 +39,12 @@ public class Filme {
         this.estoque = estoque;
     }
 
-    public double getPrcoLocacao() {
-        return prcoLocacao;
+    public double getPrecoLocacao() {
+        return precoLocacao;
     }
 
-    public void setPrcoLocacao(double prcoLocacao) {
-        this.prcoLocacao = prcoLocacao;
+    public void setPrecoLocacao(double prcoLocacao) {
+        this.precoLocacao = prcoLocacao;
     }
     
     

@@ -8,9 +8,13 @@ package application;
 import entities.Filme;
 import entities.Usuario;
 import entities.Locacao;
+import exception.ListaDeFilmeVaziaException;
 import exception.LocadoraException;
+import exception.UsuarioInvalidoException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import service.LocadoraService;
 
 /**
@@ -42,6 +46,10 @@ public class Program {
             }
         }catch(LocadoraException e){
             System.out.println("Erro: "+ e.getMessage());
+        } catch (UsuarioInvalidoException ex) {
+            Logger.getLogger(Program.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaDeFilmeVaziaException ex) {
+            Logger.getLogger(Program.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }

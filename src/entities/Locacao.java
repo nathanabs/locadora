@@ -8,6 +8,7 @@ package entities;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -59,6 +60,36 @@ public class Locacao {
     public void setDataRetorno(Date dataRetorno) {
         this.dataRetorno = dataRetorno;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 47 * hash + Objects.hashCode(this.usuario);
+        hash = 47 * hash + Objects.hashCode(this.filmes);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Locacao other = (Locacao) obj;
+        if (!Objects.equals(this.usuario, other.usuario)) {
+            return false;
+        }
+        if (!Objects.equals(this.filmes, other.filmes)) {
+            return false;
+        }
+        return true;
+    }
+    
     
     
 }
