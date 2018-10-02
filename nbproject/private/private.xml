@@ -7,7 +7,7 @@
             <file>file:/D:/Udemy%20java/Locadora/src/entities/Filme.java</file>
             <file>file:/D:/Udemy%20java/Locadora/test/testeUnitario/Teste.java</file>
             <file>file:/D:/Udemy%20java/Locadora/src/exception/LocadoraException.java</file>
-            <file>file:/D:/Udemy%20java/Locadora/src/entities/Usuario.java</file>
+            <file>file:/D:/Udemy%20java/Locadora/src/exception/ListaDeFilmeVaziaException.java</file>
             <file>file:/D:/Udemy%20java/Locadora/src/entities/Locacao.java</file>
             <file>file:/D:/Udemy%20java/Locadora/src/service/LocadoraService.java</file>
             <file>file:/D:/Udemy%20java/Locadora/src/utils/DataUtils.java</file>

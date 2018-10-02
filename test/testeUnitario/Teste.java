@@ -83,4 +83,28 @@ public class Teste {
 
         Locacao l = locadoraService.alugarFilmes(usuario, filmes);
     }
+
+    @Test
+    public void valorTotalLocacao() {
+        
+        //cenario
+        List<Filme> filmes = new ArrayList<>();
+
+        filmes.add(new Filme("filme1", 2, 4));
+        filmes.add(new Filme("filme2", 4, 5));
+        filmes.add(new Filme("filme3", 3, 5));
+
+        Usuario usuario = new Usuario("Nathan");
+
+        try {
+            
+            //acao
+            Locacao l = locadoraService.alugarFilmes(usuario, filmes);
+            
+            //verificacao
+            Assert.assertThat(l.getValor(), CoreMatchers.is(CoreMatchers.equalTo(14.0)));
+        } catch (LocadoraException | UsuarioInvalidoException | ListaDeFilmeVaziaException ex) {
+            System.out.println("Erro: " + ex.getMessage());
+        }
+    }
 }
